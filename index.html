@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferromateriales Tobia SAS · Teja y materiales de construcción en Nimaima</title>
-<meta name="description" content="Ferromateriales Tobia SAS: teja, cemento, hierro, placas, pinturas y ferretería en general en Nimaima, Cundinamarca. Cotice por WhatsApp al 310 414 4628.">
+<title>Ferromateriales Tobia SAS · Teja y materiales de construcción en Tobía, Nimaima</title>
+<meta name="description" content="Ferromateriales Tobia SAS: teja, cemento, hierro, placas, pinturas y ferretería en general en Tobía, Nimaima, Cundinamarca. Cotice por WhatsApp al 310 414 4628.">
 <meta name="theme-color" content="#1C1B19">
 
 <!-- Open Graph -->
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="Ferromateriales Tobia SAS · Teja y materiales de construcción">
-<meta property="og:description" content="Todo para su obra en Nimaima, Cundinamarca. Especialistas en teja. Cotice por WhatsApp.">
+<meta property="og:description" content="Todo para su obra en Tobía, Nimaima, Cundinamarca. Especialistas en teja. Cotice por WhatsApp.">
 <meta property="og:image" content="assets/logo-512.png">
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -25,6 +25,9 @@
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+
+<!-- Barra de progreso de lectura -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <!-- ============ ICON SPRITE ============ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -116,6 +119,15 @@
   <path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </symbol>
 
+<symbol id="icon-search" viewBox="0 0 24 24">
+  <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+  <path d="M20 20 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-close" viewBox="0 0 24 24">
+  <path d="M6 6 18 18 M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+</symbol>
+
 <symbol id="icon-arrow" viewBox="0 0 24 24">
   <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
@@ -161,11 +173,12 @@
 <section class="hero" id="top">
   <div class="hero-bg" aria-hidden="true">
     <div class="hero-grid"></div>
+    <div class="hero-spotlight" id="heroSpotlight"></div>
   </div>
 
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <p class="eyebrow" data-reveal>Ferretería y materiales de construcción · Nimaima, Cundinamarca</p>
+      <p class="eyebrow" data-reveal>Ferretería y materiales de construcción · Tobía, Nimaima</p>
       <h1 data-reveal>
         <span class="line">SI ES TEJA,</span>
         <span class="line accent">AQUÍ LA CONSIGUE.</span>
@@ -192,35 +205,36 @@
       </ul>
     </div>
 
-    <div class="hero-art" aria-hidden="true">
+    <div class="hero-art" aria-hidden="true" data-reveal>
+     <div class="hero-art-float">
       <svg viewBox="0 0 420 460" class="sheets-illustration">
         <defs>
           <linearGradient id="sheetRed" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stop-color="#D8452C"/>
             <stop offset="1" stop-color="#9C2717"/>
           </linearGradient>
-          <linearGradient id="sheetSteel" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#B7BABD"/>
-            <stop offset="1" stop-color="#6E7175"/>
+          <linearGradient id="sheetGreen" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3E8E5D"/>
+            <stop offset="1" stop-color="#245C3C"/>
           </linearGradient>
-          <linearGradient id="sheetDark" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#3B3936"/>
-            <stop offset="1" stop-color="#232120"/>
+          <linearGradient id="sheetBlue" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3179AC"/>
+            <stop offset="1" stop-color="#1C4C70"/>
           </linearGradient>
         </defs>
 
-        <!-- back sheet, steel -->
+        <!-- back sheet, green -->
         <g transform="translate(210,60) rotate(9)">
-          <rect x="-95" y="0" width="190" height="330" rx="6" fill="url(#sheetSteel)"/>
-          <g stroke="#4d4f52" stroke-width="3" opacity="0.55">
+          <rect x="-95" y="0" width="190" height="330" rx="6" fill="url(#sheetGreen)"/>
+          <g stroke="#153826" stroke-width="3" opacity="0.55">
             <path d="M-95 10 -75 330 M-55 0 -35 330 M-15 0 5 330 M45 0 65 330 M85 0 95 330" fill="none"/>
           </g>
         </g>
 
-        <!-- middle sheet, dark charcoal -->
+        <!-- middle sheet, blue -->
         <g transform="translate(195,50) rotate(-3)">
-          <rect x="-100" y="0" width="200" height="340" rx="6" fill="url(#sheetDark)"/>
-          <g stroke="#111" stroke-width="3" opacity="0.5">
+          <rect x="-100" y="0" width="200" height="340" rx="6" fill="url(#sheetBlue)"/>
+          <g stroke="#123449" stroke-width="3" opacity="0.5">
             <path d="M-100 10 -78 340 M-56 0 -34 340 M-12 0 10 340 M32 0 54 340 M76 0 98 340" fill="none"/>
           </g>
         </g>
@@ -247,6 +261,7 @@
           <circle cx="270" cy="270" r="3.5"/>
         </g>
       </svg>
+     </div>
     </div>
   </div>
 
@@ -283,23 +298,8 @@
       techos de vivienda, ampliación, galpón o local, en distintas referencias y calibres.
     </p>
 
-    <div class="teja-grid">
-      <article class="teja-card" data-reveal>
-        <div class="teja-icon"><svg width="34" height="34"><use href="#icon-teja" xlink:href="#icon-teja"/></svg></div>
-        <h3>Teja ondulada</h3>
-        <p>La más usada para vivienda y ampliaciones. Distintos calibres según la estructura y la zona.</p>
-      </article>
-      <article class="teja-card" data-reveal>
-        <div class="teja-icon"><svg width="34" height="34"><use href="#icon-teja" xlink:href="#icon-teja"/></svg></div>
-        <h3>Teja termoacústica</h3>
-        <p>Aísla el calor y baja el ruido de la lluvia. Ideal para segundo piso, cocina o local.</p>
-      </article>
-      <article class="teja-card" data-reveal>
-        <div class="teja-icon"><svg width="34" height="34"><use href="#icon-teja" xlink:href="#icon-teja"/></svg></div>
-        <h3>Teja de zinc</h3>
-        <p>Liviana y de instalación rápida, para cubiertas, cerramientos y proyectos económicos.</p>
-      </article>
-    </div>
+    <!-- Se llena automáticamente desde data/products.js (productos con destacado:true) -->
+    <div class="teja-grid" id="tejaFeaturedGrid"></div>
 
     <div class="teja-help" data-reveal>
       <div class="teja-help-item">
@@ -335,49 +335,27 @@
       encuentra en Ferromateriales Tobia:
     </p>
 
-    <div class="cat-grid">
-      <article class="cat-card cat-featured">
-        <svg width="30" height="30"><use href="#icon-teja" xlink:href="#icon-teja"/></svg>
-        <h3>Tejas y cubiertas</h3>
-        <p>Ondulada, termoacústica y de zinc, con accesorios de instalación.</p>
-        <a href="#tejas" class="cat-link">Ver más <svg width="14" height="14"><use href="#icon-arrow" xlink:href="#icon-arrow"/></svg></a>
-      </article>
+    <!-- Barra de filtros: buscador + categorías, generados desde data/products.js -->
+    <div class="catalog-toolbar" data-reveal>
+      <div class="catalog-search">
+        <svg width="18" height="18"><use href="#icon-search" xlink:href="#icon-search"/></svg>
+        <input type="text" id="catalogSearch" placeholder="Buscar un producto (ej: teja, cemento, pintura...)" aria-label="Buscar producto">
+      </div>
+      <div class="catalog-filters" id="catalogFilters" role="tablist" aria-label="Filtrar por categoría"></div>
+    </div>
 
-      <article class="cat-card">
-        <svg width="30" height="30"><use href="#icon-cement" xlink:href="#icon-cement"/></svg>
-        <h3>Cemento y agregados</h3>
-        <p>Cemento gris, arena y gravilla para toda clase de obra.</p>
-      </article>
+    <!-- Se llena automáticamente desde data/products.js -->
+    <div class="cat-grid" id="catalogGrid"></div>
 
-      <article class="cat-card">
-        <svg width="30" height="30"><use href="#icon-panel" xlink:href="#icon-panel"/></svg>
-        <h3>Placas y paneles</h3>
-        <p>Eterboard y Gyplac para muros, cielo raso y drywall.</p>
-      </article>
+    <p class="catalog-empty" id="catalogEmpty" hidden>
+      No encontramos un producto con ese nombre. Escríbanos por WhatsApp y le confirmamos si lo manejamos.
+    </p>
 
-      <article class="cat-card">
-        <svg width="30" height="30"><use href="#icon-beam" xlink:href="#icon-beam"/></svg>
-        <h3>Perfiles y hierros</h3>
-        <p>Perfiles metálicos, varillas y mallas para estructura.</p>
-      </article>
-
-      <article class="cat-card">
-        <svg width="30" height="30"><use href="#icon-paint" xlink:href="#icon-paint"/></svg>
-        <h3>Pinturas y acabados</h3>
-        <p>Vinilos como Pintubón, esmaltes e impermeabilizantes.</p>
-      </article>
-
-      <article class="cat-card">
-        <svg width="30" height="30"><use href="#icon-plumbing" xlink:href="#icon-plumbing"/></svg>
-        <h3>Plomería y calefacción</h3>
-        <p>Tubería, accesorios y equipos para agua e instalaciones.</p>
-      </article>
-
-      <article class="cat-card">
-        <svg width="30" height="30"><use href="#icon-tools" xlink:href="#icon-tools"/></svg>
-        <h3>Ferretería en general</h3>
-        <p>Herramientas, tornillería y todo lo suelto que hace falta.</p>
-      </article>
+    <div class="catalog-more-wrap">
+      <button type="button" class="btn btn-ghost btn-light" id="catalogLoadMore">
+        Ver más productos
+        <svg width="16" height="16"><use href="#icon-arrow" xlink:href="#icon-arrow"/></svg>
+      </button>
     </div>
   </div>
 </section>
@@ -424,7 +402,7 @@
       <p class="eyebrow eyebrow-dark">Quiénes somos</p>
       <h2 class="section-title">Ferromateriales Tobia SAS</h2>
       <p>
-        Somos una ferretería y distribuidora de materiales de construcción con sede en Nimaima,
+        Somos una ferretería y distribuidora de materiales de construcción con sede en Tobía, Nimaima,
         Cundinamarca. Vendemos al por mayor y al detal cemento, hierro, teja, placas, pinturas,
         y equipos y materiales de fontanería y calefacción, pensados para maestros de obra,
         contratistas y familias que están construyendo o mejorando su casa.
@@ -435,7 +413,7 @@
       </p>
       <dl class="about-facts">
         <div><dt>NIT</dt><dd>901.818.546-1</dd></div>
-        <div><dt>Ubicación</dt><dd>Nimaima, Cundinamarca</dd></div>
+        <div><dt>Ubicación</dt><dd>Tobía, Nimaima, Cundinamarca</dd></div>
         <div><dt>Actividad</dt><dd>Comercio al por mayor de materiales de construcción</dd></div>
       </dl>
     </div>
@@ -460,13 +438,13 @@
         <svg width="24" height="24"><use href="#icon-phone" xlink:href="#icon-phone"/></svg>
         <div><span>Teléfono</span><strong>314 220 6196</strong></div>
       </a>
-      <a class="contact-card" href="mailto:edilsonperez16@outlook.com" data-reveal>
+      <a class="contact-card" href="mailto:ferromaterialestobia.contacto@gmail.com" data-reveal>
         <svg width="24" height="24"><use href="#icon-mail" xlink:href="#icon-mail"/></svg>
-        <div><span>Correo</span><strong>edilsonperez16@outlook.com</strong></div>
+        <div><span>Correo</span><strong>ferromaterialestobia.contacto@gmail.com</strong></div>
       </a>
-      <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query=Ferromateriales%20Tobia%20Calle%203%20%23%201-23%20Nimaima%20Cundinamarca" target="_blank" rel="noopener" data-reveal>
+      <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query=Ferromateriales%20Tobia%20Tob%C3%ADa%20Nimaima%20Cundinamarca" target="_blank" rel="noopener" data-reveal>
         <svg width="24" height="24"><use href="#icon-pin" xlink:href="#icon-pin"/></svg>
-        <div><span>Dirección</span><strong>Calle 3 # 1-23, Nimaima</strong></div>
+        <div><span>Dirección</span><strong>Tobía, Nimaima</strong></div>
       </a>
     </div>
 
@@ -486,7 +464,7 @@
   <div class="wrap footer-inner">
     <div class="footer-brand">
       <img src="assets/logo.png" alt="Ferromateriales Tobia" class="footer-logo">
-      <p>Ferromateriales Tobia SAS · NIT 901.818.546-1<br>Calle 3 # 1-23, Nimaima, Cundinamarca</p>
+      <p>Ferromateriales Tobia SAS · NIT 901.818.546-1<br>Tobía, Nimaima, Cundinamarca</p>
     </div>
     <nav class="footer-nav" aria-label="Navegación de pie de página">
       <a href="#tejas">Tejas</a>
@@ -504,6 +482,7 @@
   <svg width="28" height="28"><use href="#icon-whatsapp" xlink:href="#icon-whatsapp"/></svg>
 </a>
 
+<script src="data/products.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
